@@ -7,57 +7,99 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <h1>Каталог тварин</h1>
-    <nav>
-        <a href="#cats">Коти</a>
-        <a href="#dogs">Собаки</a>
-        <a href="#fishes">Акваріумні риби</a>
-    </nav>
+
+<header class="site-header">
+    <div class="site-header__container">
+        <h1 class="site-header__title">Каталог тварин</h1>
+        <nav class="site-nav">
+            <a href="#animals" class="site-nav__link">Усі тварини</a>
+            <a href="#cats" class="site-nav__link">Коти</a>
+            <a href="#dogs" class="site-nav__link">Собаки</a>
+            <a href="#fishes" class="site-nav__link">Акваріумні риби</a>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <section id="filters">
-        <h2>Фільтри</h2>
-        <form>
-            <label for="species-filter">Вид тварини:</label>
-            <select id="species-filter" name="species">
-                <option value="all">Всі види</option>
-                <option value="cats">Коти</option>
-                <option value="dogs">Собаки</option>
-            </select>
+<div class="page-layout">
+    <main class="page-layout__main">
+        <section id="filters" class="filters">
+            <h2 class="filters__title">Фільтри</h2>
+            <form class="filters__form">
+                <div class="filters__group">
+                    <label for="species-filter" class="filters__label">Вид тварини:</label>
+                    <select id="species-filter" name="species" class="filters__select">
+                        <option value="all">Усі тварини</option>
+                        <option value="cats">Коти</option>
+                        <option value="dogs">Собаки</option>
+                        <option value="fishes">Акваріумні риби</option>
+                    </select>
+                </div>
 
-            <label for="size-filter">Розмір:</label>
-            <select id="size-filter" name="size">
-                <option value="all">Будь-який</option>
-                <option value="small">Малий</option>
-                <option value="large">Великий</option>
-            </select>
-        </form>
-    </section>
+                <div class="filters__group">
+                    <label for="size-filter" class="filters__label">Розмір:</label>
+                    <select id="size-filter" name="size" class="filters__select">
+                        <option value="all">Будь-який</option>
+                        <option value="small">Малий</option>
+                        <option value="large">Великий</option>
+                    </select>
+                </div>
+            </form>
+        </section>
 
-    <section id="animals">
-        <h2>Тварини</h2>
-        <article>
-            <h3>Британська короткошерста</h3>
-            <img src="assets/img/images.jpg" alt="Британська короткошерста кішка сірого кольору">
-            <p>Спокійна та лагідна порода котів.</p>
-        </article>
-        <article>
-            <h3>Золота рибка</h3>
-            <img src="assets/img/Goldfish.jpg" alt="Золота рибка в круглому акваріумі">
-            <p>Класична акваріумна рибка, що потребує просторого резервуара.</p>
-        </article>
-    </section>
-</main>
+        <section id="animals" class="animals-section">
+            <h2 class="animals-section__title">Тварини</h2>
+            <div class="cards-grid">
+                <article id="cats" class="card">
+                    <h3 class="card__title">Британська короткошерста</h3>
+                    <div class="card__image-box">
+                        <img class="card__image" src="assets/img/images.jpg" alt="Британська короткошерста кішка сірого кольору">
+                    </div>
+                    <p class="card__description">Спокійна та лагідна порода котів із густою шерстю для затишного дому.</p>
+                </article>
 
-<aside>
-    <h2>Деталі догляду</h2>
-    <p>Оберіть тварину зі списку, щоб побачити детальну інформацію про догляд, харчування та умови утримання.</p>
-</aside>
+                <article class="card">
+                    <h3 class="card__title">Мейн-кун</h3>
+                    <div class="card__image-box"></div>
+                    <p class="card__description">Велика, пухнаста та товариська порода домашніх котів із грайливим характером.</p>
+                </article>
 
-<footer>
-    <p>&copy; 2026 Ілля Крижанюк. Навчальний проєкт.</p>
+                <article id="dogs" class="card">
+                    <h3 class="card__title">Золотистий ретривер</h3>
+                    <div class="card__image-box"></div>
+                    <p class="card__description">Активний, відданий та розумний сімейний собака, що обожнює прогулянки.</p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Французький бульдог</h3>
+                    <div class="card__image-box"></div>
+                    <p class="card__description">Компактний собака з веселим характером, що ідеально підходить для квартири.</p>
+                </article>
+
+                <article id="fishes" class="card">
+                    <h3 class="card__title">Золота рибка</h3>
+                    <div class="card__image-box">
+                        <img class="card__image" src="assets/img/Goldfish.jpg" alt="Золота рибка в акваріумі">
+                    </div>
+                    <p class="card__description">Класична холодноводна рибка, яка потребує просторого акваріума та фільтрації.</p>
+                </article>
+
+                <article class="card">
+                    <h3 class="card__title">Рибка-півник</h3>
+                    <div class="card__image-box"></div>
+                    <p class="card__description">Яскрава тропічна бійцівська рибка з великими плавниками та легким доглядом.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <aside class="care-sidebar">
+        <h2 class="care-sidebar__title">Деталі догляду</h2>
+        <p class="care-sidebar__text">Оберіть тварину зі списку, щоб переглянути детальну інформацію про догляд, харчування та умови утримання.</p>
+    </aside>
+</div>
+
+<footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 Ілля Крижанюк. Навчальний проєкт.</p>
 </footer>
 
 <script src="js/app.js"></script>
