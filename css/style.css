@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    background-color: #fdfbf7;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#filters {
+    background-color: #fff8e1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #c8e6c9;
+}
+
+#filters h2 {
+    margin-top: 0;
+}
+
+#filters label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+#filters select {
+    padding: 8px;
+    margin-right: 12px;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+}
+
+#animals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#animals h2 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+article {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    width: calc(50% - 10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+article h3 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+article img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #4CAF50;
+}
+
+aside {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #e8f5e9;
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
