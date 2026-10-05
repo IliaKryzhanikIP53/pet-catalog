@@ -7,12 +7,59 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Шапка з навігацією та пошуком -->
-<!-- Блок фільтрів
-за видом/розміром; список карток тварин -->
-<!-- Блок деталей обраної
-тварини (догляд) -->
-<!-- Підвал -->
+<header>
+    <h1>Каталог тварин</h1>
+    <nav>
+        <a href="#cats">Коти</a>
+        <a href="#dogs">Собаки</a>
+        <a href="#fishes">Акваріумні риби</a>
+    </nav>
+</header>
+
+<main>
+    <section id="filters">
+        <h2>Фільтри</h2>
+        <form>
+            <label for="species-filter">Вид тварини:</label>
+            <select id="species-filter" name="species">
+                <option value="all">Всі види</option>
+                <option value="cats">Коти</option>
+                <option value="dogs">Собаки</option>
+            </select>
+
+            <label for="size-filter">Розмір:</label>
+            <select id="size-filter" name="size">
+                <option value="all">Будь-який</option>
+                <option value="small">Малий</option>
+                <option value="large">Великий</option>
+            </select>
+        </form>
+    </section>
+
+    <section id="animals">
+        <h2>Тварини</h2>
+        <article>
+            <h3>Британська короткошерста</h3>
+            <img src="assets/img/images.jpg" alt="Британська короткошерста кішка сірого кольору">
+            <p>Спокійна та лагідна порода котів.</p>
+        </article>
+        <article>
+            <h3>Золота рибка</h3>
+            <img src="assets/img/Goldfish.jpg" alt="Золота рибка в круглому акваріумі">
+            <p>Класична акваріумна рибка, що потребує просторого резервуара.</p>
+        </article>
+    </section>
+</main>
+
+<aside>
+    <h2>Деталі догляду</h2>
+    <p>Оберіть тварину зі списку, щоб побачити детальну інформацію про догляд, харчування та умови утримання.</p>
+</aside>
+
+<footer>
+    <p>&copy; 2026 Ілля Крижанюк. Навчальний проєкт.</p>
+</footer>
+
 <script src="js/app.js"></script>
 </body>
 </html>
