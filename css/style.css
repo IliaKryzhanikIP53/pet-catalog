@@ -7,8 +7,8 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    background-color: #fdfbf7;
-    color: #333333;
+    background-color: #fffaf0;
+    color: #4a3f35;
 }
 
 img {
@@ -18,9 +18,10 @@ img {
 }
 
 .site-header {
-    background-color: #4CAF50;
+    background-color: #6a994e;
     color: #ffffff;
-    padding: 20px;
+    padding: 24px 20px;
+    border-bottom: 4px solid #386641;
 }
 
 .site-header__container {
@@ -29,35 +30,39 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .site-header__title {
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .site-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 18px;
+    gap: 16px 24px;
 }
 
 .site-nav__link {
-    color: #ffffff;
+    color: #f2e8cf;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
 }
 
 .site-nav__link:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .page-layout {
     display: block;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 0 16px;
 }
 
@@ -66,132 +71,165 @@ img {
 }
 
 .filters {
-    background-color: #fff8e1;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    border: 1px solid #c8e6c9;
+    background-color: #f2e8cf;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid #e1d5b8;
 }
 
 .filters__title {
     margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.25rem;
+    margin-bottom: 16px;
+    font-size: 1.35rem;
+    color: #386641;
 }
 
 .filters__form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .filters__group {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .filters__label {
     font-weight: 600;
+    color: #4a3f35;
 }
 
 .filters__select {
-    padding: 8px;
-    border: 1px solid #a5d6a7;
-    border-radius: 4px;
+    padding: 10px 14px;
+    border: 1px solid #bc4749;
+    border-radius: 8px;
     background-color: #ffffff;
     font-size: 1rem;
+    color: #4a3f35;
+    outline: none;
 }
 
 .animals-section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .animals-section__title {
     margin-top: 0;
-    margin-bottom: 16px;
-    color: #2e7d32;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #386641;
+    border-bottom: 2px solid #e1d5b8;
+    padding-bottom: 8px;
+    font-size: 1.75rem;
 }
 
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
 }
 
 .card {
     background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 24px 20px;
+    border-radius: 20px;
+    border: 1px solid #f2e8cf;
+    box-shadow: 0 6px 12px rgba(74, 63, 53, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     height: 100%;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(74, 63, 53, 0.12);
+}
+
+.card__badge {
+    position: absolute;
+    top: -12px;
+    background-color: #bc4749;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.card__badge--small { background-color: #a7c957; color: #2e4a1a; }
+.card__badge--medium { background-color: #e5989b; color: #5a1a1c; }
+.card__badge--large { background-color: #bc4749; color: #ffffff; }
+
+.card__image-box {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+    background-color: #f2e8cf;
+    border-radius: 50%;
+    border: 4px solid #a7c957;
+    overflow: hidden;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card__title {
     margin-top: 0;
-    margin-bottom: 10px;
-    color: #2e7d32;
-    font-size: 1.15rem;
+    margin-bottom: 12px;
+    color: #386641;
+    font-size: 1.25rem;
     min-height: 2.8em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card__image-box {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 10px;
-    flex-shrink: 0;
-}
-
-.card__image {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #4CAF50;
-}
-
 .card__description {
     margin: 0;
     margin-top: auto;
     font-size: 0.95rem;
-    color: #555555;
+    color: #6d5d4b;
+    line-height: 1.6;
 }
 
 .care-sidebar {
-    margin-top: 25px;
-    padding: 20px;
-    border: 1px solid #4CAF50;
-    border-radius: 8px;
-    background-color: #e8f5e9;
+    margin-top: 30px;
+    padding: 24px;
+    border: 2px dashed #a7c957;
+    border-radius: 16px;
+    background-color: #f9f5eb;
 }
 
 .care-sidebar__title {
     margin-top: 0;
-    color: #2e7d32;
+    color: #386641;
+    font-size: 1.35rem;
 }
 
 .care-sidebar__text {
     margin: 0;
     line-height: 1.6;
+    color: #4a3f35;
 }
 
 .site-footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333333;
-    color: #f1f1f1;
-    font-size: 0.9rem;
-    margin-top: 40px;
+    padding: 30px 20px;
+    background-color: #386641;
+    color: #f2e8cf;
+    font-size: 0.95rem;
+    margin-top: 50px;
 }
 
 .site-footer__copy {
@@ -213,11 +251,11 @@ img {
     .filters__group {
         flex-direction: row;
         align-items: center;
-        margin-right: 12px;
+        margin-right: 16px;
     }
 
     .filters__label {
-        margin-right: 8px;
+        margin-right: 10px;
     }
 
     .cards-grid {
@@ -228,16 +266,16 @@ img {
 @media (min-width: 1024px) {
     .page-layout {
         display: grid;
-        grid-template-columns: 1fr 300px;
-        column-gap: 30px;
+        grid-template-columns: 1fr 320px;
+        column-gap: 40px;
         align-items: start;
-        padding: 0 24px;
+        padding: 0 30px;
     }
 
     .care-sidebar {
         margin-top: 0;
         position: sticky;
-        top: 20px;
+        top: 30px;
     }
 
     .cards-grid {

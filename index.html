@@ -22,7 +22,7 @@
 
 <div class="page-layout">
     <main class="page-layout__main">
-        <section id="filters" class="filters">
+        <section class="filters" id="filters">
             <h2 class="filters__title">Фільтри</h2>
             <form class="filters__form">
                 <div class="filters__group">
@@ -46,48 +46,56 @@
             </form>
         </section>
 
-        <section id="animals" class="animals-section">
+        <section class="animals-section" id="animals">
             <h2 class="animals-section__title">Тварини</h2>
             <div class="cards-grid">
-                <article id="cats" class="card">
-                    <h3 class="card__title">Британська короткошерста</h3>
+
+                <article class="card" id="cats">
+                    <div class="card__badge card__badge--medium">Середній</div>
                     <div class="card__image-box">
-                        <img class="card__image" src="assets/img/images.jpg" alt="Британська короткошерста кішка сірого кольору">
+                        <img class="card__image" src="assets/img/images.jpg" alt="Британська короткошерста кішка">
                     </div>
+                    <h3 class="card__title">Британська короткошерста</h3>
                     <p class="card__description">Спокійна та лагідна порода котів із густою шерстю для затишного дому.</p>
                 </article>
 
                 <article class="card">
-                    <h3 class="card__title">Мейн-кун</h3>
+                    <div class="card__badge card__badge--large">Великий</div>
                     <div class="card__image-box"></div>
+                    <h3 class="card__title">Мейн-кун</h3>
                     <p class="card__description">Велика, пухнаста та товариська порода домашніх котів із грайливим характером.</p>
                 </article>
 
-                <article id="dogs" class="card">
-                    <h3 class="card__title">Золотистий ретривер</h3>
+                <article class="card" id="dogs">
+                    <div class="card__badge card__badge--large">Великий</div>
                     <div class="card__image-box"></div>
+                    <h3 class="card__title">Золотистий ретривер</h3>
                     <p class="card__description">Активний, відданий та розумний сімейний собака, що обожнює прогулянки.</p>
                 </article>
 
                 <article class="card">
-                    <h3 class="card__title">Французький бульдог</h3>
+                    <div class="card__badge card__badge--small">Малий</div>
                     <div class="card__image-box"></div>
+                    <h3 class="card__title">Французький бульдог</h3>
                     <p class="card__description">Компактний собака з веселим характером, що ідеально підходить для квартири.</p>
                 </article>
 
-                <article id="fishes" class="card">
-                    <h3 class="card__title">Золота рибка</h3>
+                <article class="card" id="fishes">
+                    <div class="card__badge card__badge--small">Малий</div>
                     <div class="card__image-box">
-                        <img class="card__image" src="assets/img/Goldfish.jpg" alt="Золота рибка в акваріумі">
+                        <img class="card__image" src="assets/img/Goldfish.jpg" alt="Золота рибка">
                     </div>
+                    <h3 class="card__title">Золота рибка</h3>
                     <p class="card__description">Класична холодноводна рибка, яка потребує просторого акваріума та фільтрації.</p>
                 </article>
 
                 <article class="card">
-                    <h3 class="card__title">Рибка-півник</h3>
+                    <div class="card__badge card__badge--small">Малий</div>
                     <div class="card__image-box"></div>
+                    <h3 class="card__title">Рибка-півник</h3>
                     <p class="card__description">Яскрава тропічна бійцівська рибка з великими плавниками та легким доглядом.</p>
                 </article>
+
             </div>
         </section>
     </main>
